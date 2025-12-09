@@ -1,6 +1,6 @@
 # Exercice CI/CD - Flask & GitHub Actions
 
-## Objectifs Pédagogiques
+## Objectifs
 
 1. **Apprendre à exécuter** une application Flask localement.
 2. **Exécuter les tests** unitaires pour valider le code existant.
@@ -13,31 +13,21 @@
 
 ### 1. Installation
 
-1. Créez un environnement virtuel Python :
-
-   **Mac/Linux :**
+1. Créez un environnement virtuel Python (Max/Linux avec Bash, Windows avec Powershell ou GitBash):
 
    ```bash
    python3 -m venv .venv
-   ```
-
-   **Windows :**
-
-   ```powershell
-   python -m venv .venv
    ```
 
 2. Activez-le :
 
    **Mac/Linux :**
 
-   ```bash
-   source .venv/bin/activate
-   ```
-
-   **Windows :**
-
    ```powershell
+   # Sous Mac/Linux (bash)
+   source .venv/bin/activate
+
+   # Sous Windows (Powershell)
    .venv\Scripts\activate
    ```
 
@@ -52,11 +42,13 @@
    deactivate
    ```
 
+<div class="page"></div>
+
 ### 2. Exécution de l'application
 
 1. Définissez la variable d'environnement pour Flask (depuis la racine) :
 
-   **Mac/Linux :**
+   **Mac/Linux (bash) :**
 
    ```bash
    export FLASK_APP=app/main.py
@@ -84,19 +76,15 @@
 
 Validez que l'application fonctionne correctement en lançant les tests fournis :
 
-**Mac/Linux :**
-
 ```bash
 python3 tests.py
-```
-
-**Windows :**
-
-```powershell
+# ou
 python tests.py
 ```
 
 _Si les tests passent, vous êtes prêt pour la suite._
+
+<div class="page"></div>
 
 ### 4. Qualité du Code (Linting)
 
@@ -132,7 +120,7 @@ Une bonne pipeline CI ne se contente pas de tester, elle vérifie aussi la quali
 ### Consignes
 
 1. Ajoutez une étape de **Linting** à votre workflow CI.
-2. Utilisez un outil comme `flake8`.
+2. Utilisez l'outil `flake8` pour valider le code
 3. Faites en sorte que le CI échoue si le linter détecte des erreurs graves.
 
 ### Ressources Utiles
@@ -142,3 +130,9 @@ Une bonne pipeline CI ne se contente pas de tester, elle vérifie aussi la quali
 - [Flake8 Documentation](https://flake8.pycqa.org/en/latest/)
 
 A vous de jouer !
+
+<div class="page"></div>
+
+## Demo interface
+
+<img src="demo.png">
