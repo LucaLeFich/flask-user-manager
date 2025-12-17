@@ -11,3 +11,18 @@ jobs:
   CI:
     name: Test Flask
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout
+      
+      - name: Setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python tests.py
